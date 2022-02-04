@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Book constructor - creates a book object
 Bookinfo::Bookinfo(string i, string t, string a,string p, string date, int qty, double w, double r) {
     isbn = i; 
     title = t; 

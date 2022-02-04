@@ -21,7 +21,6 @@ int main() {
     Cashier order; 
     Invmenu inventory; 
     Reports report; 
-    Bookinfo books; 
 
     int choice = 0;
     do {
