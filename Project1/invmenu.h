@@ -4,15 +4,13 @@
 #pragma once
 
 using namespace std; 
-
 class Invmenu
 {
     public:
         void displayInventoryMenu();
-        void getUserChoice(); 
-        void findBook();
+        void handleUserChoice(); 
+        void lookUpBook();
         void addBook();
-        void editBookRecord();
+        void editBook();
         void deleteBook();
-        void returnToMain();
 };

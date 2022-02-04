@@ -16,5 +16,6 @@ class Bookinfo
     double retailPrice; 
     
     public:
+        Bookinfo();
         void displayBookInfo();
 };

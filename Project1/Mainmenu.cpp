@@ -29,12 +29,18 @@ int main() {
         displayMainMenu(); 
         cout << "Enter your choice: ";
         cin >> choice;
+        while (choice <= 0 || choice > 4) {
+            cout << "Please enter number in range 1 - 4" << endl;
+            cout << "Enter your choice: "; 
+            cin >> choice; 
+        }
+
+        cout << "You chose option " << choice << endl; 
         cout << "\n**************************************************\n" << endl;
 
         switch(choice) {
         case 1: 
             order.pickItems(); 
-            order.displayTicket();
             break;
         case 2:
             inventory.displayInventoryMenu();

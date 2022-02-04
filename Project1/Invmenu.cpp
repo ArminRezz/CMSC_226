@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// Displays menu options for inventory
 void Invmenu::displayInventoryMenu() { 
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
@@ -17,16 +18,23 @@ void Invmenu::displayInventoryMenu() {
     cout << "4. Delete a Book" << endl; 
     cout << "5. Return to the Main Menu" << endl; 
     cout << "\n**************************************************\n" << endl;
-    getUserChoice();
+    handleUserChoice();
 }
 
-void Invmenu::getUserChoice() {
+// Gets user selection and reroutes to corresponding function
+void Invmenu::handleUserChoice() {
 
-    cout << "Enter your choice: " << endl;
-    int choice = 0;
-    cin >> choice; 
+    int choice = 0; 
+    cout << "Enter your choice: ";
+    cin >> choice;
+    while (choice <= 0 || choice > 5) {
+        cout << "Please enter number in range 1 - 5" << endl;
+        cout << "Enter your choice: "; 
+        cin >> choice; 
+    }
+    cout << "You chose option " << choice << endl; 
 
-     switch(choice) {
+    switch(choice) {
         case 1: 
             //findBook();
             break;
@@ -41,13 +49,11 @@ void Invmenu::getUserChoice() {
             break; 
         case 5:
             break;
-        default:
-            break;
     }
 
 }
 
-void Invmenu::findBook() {
+void Invmenu::lookUpBook() {
     // Create a text string, which is used to output the text file
     string myText;
     // Read from the text file
@@ -73,12 +79,9 @@ void Invmenu::addBook() {
     MyFile.close();
     return;
 }
-void Invmenu::editBookRecord() {
+void Invmenu::editBook() {
     return;
 }
 void Invmenu::deleteBook() {
-    return;
-}
-void Invmenu::returnToMain() {
     return;
 }

@@ -2,6 +2,7 @@
 #include "reports.h"
 using namespace std;
 
+// Displays menu options for reports
 void Reports::displayReportsMenu() {
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
@@ -14,16 +15,23 @@ void Reports::displayReportsMenu() {
     cout << "6. Listing by Age" << endl; 
     cout << "7. Return to Main Menu\n" << endl; 
     
-    getUserChoice();
+    handleUserChoice();
 
     cout << "\n**************************************************\n" << endl;
 }
 
-void Reports::getUserChoice() {
+// Gets user selection and reroutes to corresponding function
+void Reports::handleUserChoice() {
 
-    cout << "Enter your choice: " << endl;
-    int choice = 0;
-    cin >> choice; 
+    int choice = 0; 
+    cout << "Enter your choice: ";
+    cin >> choice;
+    while (choice <= 0 || choice > 7) {
+        cout << "Please enter number in range 1 - 7" << endl;
+        cout << "Enter your choice: "; 
+        cin >> choice; 
+    }
+    cout << "You chose option " << choice << endl; 
 
      switch(choice) {
         case 1: 
@@ -46,31 +54,25 @@ void Reports::getUserChoice() {
             break;
         case 7:
             break;
-        default:
-            break;
     }
 
 }
 
-void Reports::inventoryListing() {
+void Reports::repListing() {
     return; 
 }
-void Reports::inventoryWholesaleValue() {
+void Reports::repWholesale() {
     return; 
 }
-void Reports::inventoryRetailValue() {
+void Reports::repRetail() {
     return; 
 }
-void Reports::listingByQuantity() {
+void Reports::repQty() {
     return; 
 }
-void Reports::listingByCost() {
+void Reports::repCost() {
     return; 
 }
-void Reports::listingByAge() {
+void Reports::repAge() {
     return; 
 }
-void Reports::returnToMainMenu() {
-    return; 
-}
- 

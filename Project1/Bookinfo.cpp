@@ -3,6 +3,18 @@
 
 using namespace std;
 
+Bookinfo::Bookinfo(string i, string t, string a,string p, string date, int qty, double w, double r) {
+    isbn = i; 
+    title = t; 
+    author = a; 
+    publisher = p; 
+    dateAdded = date; 
+    quantityOnHand = qty; 
+    wholesaleCost = w; 
+    retailPrice = r; 
+}
+
+// displays information about any given book
 void Bookinfo::displayBookInfo() {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
