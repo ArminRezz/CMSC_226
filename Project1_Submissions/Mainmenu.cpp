@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
 
+    // Display Main Menu 
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tMain Menu\n" << endl; 
@@ -12,6 +13,7 @@ int main() {
     cout << "3. Report Module" << endl; 
     cout << "4. Exit" << endl; 
 
+    // get user choice until valid input is entered
     int choice = 0;
     do {
         cout << "Enter your choice: "; 

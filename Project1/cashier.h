@@ -5,7 +5,6 @@
 using namespace std; 
 
 const double SALES_TAX = 0.06;  
-
 class Cashier
 {
     string date; 

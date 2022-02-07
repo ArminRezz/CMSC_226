@@ -3,12 +3,39 @@
 #include <fstream>
 #include <string>
 #include <cstring>
+#include <cstdlib>
+#include <sstream>
 #include "invmenu.h"
 
 using namespace std;
 
+Invmenu::Invmenu() {
+    // Create a text string, which is used to output the text file
+    string myText;
+    // Read from the text file
+    ifstream MyReadFile("InventoryDatabase.txt");
+    // Use a while loop together with the getline() function to read the file line by line
+    while (getline (MyReadFile, myText)) {
+        
+        vector<string> v(9, "NONE");
+        stringstream ss(myText);
+ 
+        while (ss.good()) {
+            string substr;
+            getline(ss, substr, ',');
+            v.push_back(substr);
+        }
+        books.push_back(Bookinfo(v[0], v[1], v[2], v[3], v[4], stoi(v[5]), stod(v[6]), stod(v[7])));
+    }
+    for (int i = 0; i < books.size(); i++) {
+        books[i].displayBookInfo();
+    }
+    // Close the file
+    MyReadFile.close();
+}
+
 // Displays menu options for inventory
-void Invmenu::displayInventoryMenu() { 
+void Invmenu::displayInventoryMenu() {  
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "Inventory Database\n" << endl; 
@@ -85,3 +112,10 @@ void Invmenu::editBook() {
 void Invmenu::deleteBook() {
     return;
 }
+
+/*void Invmenu::displayAllbooks() {
+    for (int i = 0; i < books.size(); i++) {
+        books[i].displayBookInfo();
+    }
+} */
+

@@ -19,15 +19,15 @@ Bookinfo::Bookinfo(string i, string t, string a,string p, string date, int qty, 
 void Bookinfo::displayBookInfo() {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
-    cout << "\tBook Information\n" << endl; 
-    cout << "ISBN:" << endl; 
-    cout << "Title:" << endl; 
-    cout << "Author:" << endl; 
-    cout << "Publisher:" << endl; 
-    cout << "Date Added:" << endl; 
-    cout << "Quantity-On-Hand:" << endl; 
-    cout << "Wholesale Cost:" << endl; 
-    cout << "Retail Price:" << endl; 
+    cout << "\tBook Information\n" << endl;  
+    cout << "ISBN:" << isbn << endl; 
+    cout << "Title:" << title << endl; 
+    cout << "Author:" << author << endl; 
+    cout << "Publisher:" << publisher << endl; 
+    cout << "Date Added:" << dateAdded << endl; 
+    cout << "Quantity-On-Hand:" << quantityOnHand << endl; 
+    cout << "Wholesale Cost:" << wholesaleCost << endl; 
+    cout << "Retail Price:" << retailPrice << endl; 
     cout << "\n**************************************************\n" << endl;
 }
  

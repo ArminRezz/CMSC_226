@@ -3,6 +3,8 @@ using namespace std;
 
 int main() {
 
+    // Displays all parameters of a given Books information
+
     cout << "\tSerendipity Booksellers" << endl; 
     cout << "\tBook Information\n" << endl; 
     cout << "ISBN:" << endl; 

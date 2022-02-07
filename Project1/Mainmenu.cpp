@@ -19,7 +19,7 @@ void displayMainMenu() {
 int main() {
 
     Cashier order; 
-    Invmenu inventory; 
+    Invmenu inventory = Invmenu(); 
     Reports report; 
 
     int choice = 0;

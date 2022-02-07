@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
 
+    // Display reports Menu
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tReports\n" << endl; 
     cout << "1. Inventory Listing" << endl; 
@@ -13,6 +14,7 @@ int main() {
     cout << "6. Listing by Age" << endl; 
     cout << "7. Return to Main Menu\n" << endl; 
     
+    // Get user choice until valid input is given
     int choice = 0;
     do {
         cout << "Enter your choice: "; 
