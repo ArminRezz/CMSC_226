@@ -4,9 +4,7 @@ using namespace std;
 int main() {
     
     int choice = 0;
-
     do {
-
         // Display Inventory Database Menu
         cout << "Serendipity Booksellers" << endl; 
         cout << "Inventory Database\n" << endl; 

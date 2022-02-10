@@ -11,7 +11,7 @@ int main() {
     string isbn; 
     string title;
     double price; 
-    char newTransaction; 
+    char newTrans; 
 
     do {
         // Get user input
@@ -44,18 +44,13 @@ int main() {
         cout << "\tTotal: " << showpoint << setprecision(2) << total << endl; 
         cout << "Thank You for Shopping at Serendipity!" << endl; 
 
-        // ask user if they want another transaction
-        cout << "\nWould you like to start a new transaction(y/n): " << endl; 
-        cin >> newTransaction;
+        do {
+            cout << "Would you like to start a new transaction? " << endl; 
+            cout << "Please enter one of the following | Y, y, N, n | : " << endl;
+            cin >> newTrans; 
+        } while ((newTrans != 'Y') && (newTrans != 'y') && (newTrans != 'N') && (newTrans != 'n'));
 
-        // check user input untill valid data is entered
-        while (newTransaction != "Y" || newTransaction != "y" || newTransaction != "N" || newTransaction != "n") {
-            cout << "Please enter one of the following | Y, y, N, n |" << endl;
-            cout << "Would you like to start a new transaction(y/n): " << endl; 
-            cin >> newTransaction; 
-        }
-
-    } while (newTransaction == "Y" || newTransaction == "y" );
+    } while (newTrans != 'N' && newTrans != 'n');
 
     return 0; 
 }

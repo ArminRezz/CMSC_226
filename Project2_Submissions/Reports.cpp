@@ -4,9 +4,7 @@ using namespace std;
 int main() {
 
     int choice = 0;
-
     do {
-
         // Display reports Menu
         cout << "Serendipity Booksellers" << endl; 
         cout << "\tReports\n" << endl; 
