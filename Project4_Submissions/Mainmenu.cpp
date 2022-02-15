@@ -1,3 +1,12 @@
+/******************************************************************
+** Program: Programming Project 2: Mainmenu.cpp
+** Description: Displays Main Menu, recieves and validates user input, branches to other modules
+** Course: CMSC226 CRN 36331
+** Professor: Ping-Wei Tsai
+** Student: Armin Rezaiyan-Nojani
+** Due Date: 02/14/22
+******************************************************************/
+
 #include <iostream>
 #include "Cashier.cpp"
 #include "Invmenu.cpp"
@@ -18,9 +27,9 @@ void displayMainMenu() {
 
 int main() {
 
-    Cashier order; 
-    Invmenu inventory = Invmenu(); 
-    Reports report; 
+    Cashier c; 
+    Invmenu i; 
+    Reports r; 
 
     int choice = 0;
     do {
@@ -34,18 +43,18 @@ int main() {
             cin >> choice; 
         }
 
-        cout << "You chose option " << choice << endl; 
+        cout << "\nYou chose option " << choice << endl; 
         cout << "\n**************************************************\n" << endl;
 
         switch(choice) {
         case 1: 
-            order.pickItems(); 
+            c.cashier(); 
             break;
         case 2:
-            inventory.displayInventoryMenu();
+            i.invMenu();
             break; 
         case 3:
-            report.displayReportsMenu();
+            r.reports();
             break;
         case 4:
             cout << "Thank you for coming to my store!!!" << endl; 

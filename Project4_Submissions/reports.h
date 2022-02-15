@@ -6,7 +6,7 @@ using namespace std;
 class Reports
 {
     public:
-        void displayReportsMenu();
+        void reports();
         void handleUserChoice();
         void repListing();
         void repWholesale();

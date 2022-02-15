@@ -1,3 +1,12 @@
+/******************************************************************
+** Program: Programming Project 2: Cashier.cpp
+** Description: Get's user purchasing info, displays purchase ticket
+** Course: CMSC226 CRN 36331
+** Professor: Ping-Wei Tsai
+** Student: Armin Rezaiyan-Nojani
+** Due Date: 02/14/22
+******************************************************************/
+
 #include <iostream>
 #include <iomanip>
 #include <string> 
@@ -12,7 +21,7 @@ double Cashier::calcSubTotal() {
 
 // claculates sales tax in dollars for purchase
 double Cashier::calcSalesTax() {
-    return calcSubTotal() * 0.06; 
+    return calcSubTotal() * SALES_TAX; 
 }
 
 // calculates total for purchase 
@@ -21,7 +30,7 @@ double Cashier::calculateTotal() {
 }
 
 // gathers user purchase information 
-void Cashier::pickItems() {
+void Cashier::cashier() {
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tCashier Module" << endl; 
@@ -42,12 +51,11 @@ void Cashier::pickItems() {
 // Displays purchase ticket and asks user if they want to do another transaction 
 void Cashier::displayTicket() {
 
-    // displays reciept of purchase information 
-    cout << "\n**************************************************\n" << endl;
+     // Display reciept/ticket with all the information
     cout << "Serendipity Book Sellers\n" << endl; 
     cout << "Date: " << date << "\n\n"; 
     cout << left << setw(5) << "Qty" << setw(10) << "ISBN" << setw(20) << "Title" << setw(10) << "Price" << setw(10) << "Total" << endl;
-    cout << left << setw(5) << quantity << setw(10) << isbn << setw(20) << title << setw(10) << price << setw(10) << calculateTotal() << endl; 
+    cout << left << setw(5) << quantity << setw(10) << isbn << setw(20) << title << setw(10) << showpoint << fixed << setprecision(2) << price << setw(10) << calcSubTotal() << endl; 
     cout << "___________________________________________________________\n" << endl; 
     cout << "\tSubtotal: " << calcSubTotal() << endl; 
     cout << "\tTax: " << showpoint << setprecision(2) << calcSalesTax() << endl; 
@@ -63,8 +71,10 @@ void Cashier::displayTicket() {
     } while ((newTrans != 'Y') && (newTrans != 'y') && (newTrans != 'N') && (newTrans != 'n'));
 
     if (newTrans == 'Y' || newTrans == 'y' ) {
-        pickItems();
-    }
+        cout << "\n**************************************************\n" << endl;
+        cashier();
+    }  
+    return;
 
-    cout << "\n**************************************************\n" << endl;
+   
 }
