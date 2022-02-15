@@ -1,16 +1,13 @@
 // invmenu.h
 #include <string>
-#include <vector>
 #include "bookinfo.h"
 #pragma once
 
 using namespace std; 
 class Invmenu
 {
-    vector<Bookinfo> books; 
-
     public:
-        void displayInventoryMenu();
+        void invMenu();
         void handleUserChoice(); 
         void lookUpBook();
         void addBook();

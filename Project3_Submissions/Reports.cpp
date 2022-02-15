@@ -1,9 +1,18 @@
+/******************************************************************
+** Program: Programming Project 2: Reports.cpp
+** Description: Displays Reports Menu, recieves and validates user input, branches to other modules
+** Course: CMSC226 CRN 36331
+** Professor: Ping-Wei Tsai
+** Student: Armin Rezaiyan-Nojani
+** Due Date: 02/14/22
+******************************************************************/
+
 #include <iostream>
 #include "reports.h"
 using namespace std;
 
 // Displays menu options for reports
-void Reports::displayReportsMenu() {
+void Reports::reports() {
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tReports\n" << endl; 

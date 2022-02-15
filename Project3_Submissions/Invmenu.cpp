@@ -1,16 +1,20 @@
+/******************************************************************
+** Program: Programming Project 2: Invmenu.cpp
+** Description: Displays Inventory Menu, recieves and validates user input
+** Course: CMSC226 CRN 36331
+** Professor: Ping-Wei Tsai
+** Student: Armin Rezaiyan-Nojani
+** Due Date: 02/14/22
+******************************************************************/
+
 #include <iostream>
-#include <iostream>
-#include <fstream>
 #include <string>
-#include <cstring>
-#include <cstdlib>
-#include <sstream>
 #include "invmenu.h"
 
 using namespace std;
 
 // Displays menu options for inventory
-void Invmenu::displayInventoryMenu() {  
+void Invmenu::invMenu() {  
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "Inventory Database\n" << endl; 

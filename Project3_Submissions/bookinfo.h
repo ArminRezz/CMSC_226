@@ -6,7 +6,6 @@ using namespace std;
 
 class Bookinfo
 {
-    
     public:
-    void displayBookInfo();
+    void bookInfo();
 };

@@ -1,7 +1,6 @@
 // cashier.h
 #include <string>
 #pragma once
-
 using namespace std; 
 
 const double SALES_TAX = 0.06;  
@@ -15,7 +14,7 @@ class Cashier
     double total; 
     
     public:
-        void pickItems();
+        void cashier();
         void displayTicket();
         double calcSubTotal();
         double calcSalesTax();
