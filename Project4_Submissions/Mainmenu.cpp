@@ -1,5 +1,5 @@
 /******************************************************************
-** Program: Programming Project 2: Mainmenu.cpp
+** Program: Programming Project 4: Mainmenu.cpp
 ** Description: Displays Main Menu, recieves and validates user input, branches to other modules
 ** Course: CMSC226 CRN 36331
 ** Professor: Ping-Wei Tsai

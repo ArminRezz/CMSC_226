@@ -2,12 +2,19 @@
 #include <string>
 #include "bookinfo.h"
 #pragma once
-
 using namespace std; 
+
+const ARRAY_SIZE = 20;
 class Invmenu
 {
-
-    vector<Bookinfo> bookInv; 
+    string isbn[ARRAY_SIZE]; 
+    string title[ARRAY_SIZE]; 
+    string author[ARRAY_SIZE]; 
+    string publisher[ARRAY_SIZE];
+    string dateAdded[ARRAY_SIZE];
+    int quantityOnHand[ARRAY_SIZE]; 
+    double wholesaleCost[ARRAY_SIZE];
+    double retailPrice[ARRAY_SIZE]; 
 
     public:
         void invMenu();
@@ -16,6 +23,6 @@ class Invmenu
         void addBook();
         void editBook();
         void deleteBook();
-        void addBooksToVector();
-        void printUsingVector();
+        int findBookIndex(string title);
 };
+

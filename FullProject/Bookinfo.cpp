@@ -3,6 +3,18 @@
 
 using namespace std;
 
+// default constructor
+Bookinfo::Bookinfo() {
+    isbn = "NOT AVAILABLE"; 
+    title = "NOT AVAILABLE"; 
+    author = "NOT AVAILABLE"; 
+    publisher = "NOT AVAILABLE";
+    dateAdded = "NOT AVAILABLE";
+    quantityOnHand = 0; 
+    wholesaleCost = 0.0;
+    retailPrice = 0.0; 
+}
+
 // Book constructor - creates a book object
 Bookinfo::Bookinfo(string i, string t, string a,string p, string date, int qty, double w, double r) {
     isbn = i; 

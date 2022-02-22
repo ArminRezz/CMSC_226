@@ -1,5 +1,5 @@
 /******************************************************************
-** Program: Programming Project 2: Cashier.cpp
+** Program: Programming Project 4: Cashier.cpp
 ** Description: Get's user purchasing info, displays purchase ticket
 ** Course: CMSC226 CRN 36331
 ** Professor: Ping-Wei Tsai

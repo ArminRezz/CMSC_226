@@ -1,5 +1,5 @@
 /******************************************************************
-** Program: Programming Project 2: Bookinfo.cpp
+** Program: Programming Project 4: Bookinfo.cpp
 ** Description: Displays information about particular book
 ** Course: CMSC226 CRN 36331
 ** Professor: Ping-Wei Tsai
@@ -12,43 +12,19 @@
 
 using namespace std;
 
- // default constructor
-Bookinfo::Bookinfo() {
-    isbn = "NOT AVAILABLE"; 
-    title = "NOT AVAILABLE"; 
-    author = "NOT AVAILABLE"; 
-    publisher = "NOT AVAILABLE";
-    dateAdded = "NOT AVAILABLE";
-    quantityOnHand = 0; 
-    wholesaleCost = 0.0;
-    retailPrice = 0.0; 
-}
-
-// all parameter constructor
-Bookinfo(string i, string t, string a, string p, string d, int q, double w, double r) {
-    isbn = i; 
-    title = t; 
-    author = a; 
-    publisher = p;
-    dateAdded = d;
-    quantityOnHand = q; 
-    wholesaleCost = w;
-    retailPrice = r; 
-}
-
 // displays information about any given book// displays information about any given book
-void Bookinfo::bookInfo() {
+void Bookinfo::bookInfo(string i, string t, string a, string p, string d, int q, double w, double r) {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
     cout << "\tBook Information\n" << endl;  
-    cout << "ISBN:" << endl; 
-    cout << "Title:" << endl; 
-    cout << "Author:" << endl; 
-    cout << "Publisher:" << endl; 
-    cout << "Date Added:" << endl; 
-    cout << "Quantity-On-Hand:" << endl; 
-    cout << "Wholesale Cost:" << endl; 
-    cout << "Retail Price:" << endl; 
+    cout << "ISBN:" << i << endl; 
+    cout << "Title:" << t << endl; 
+    cout << "Author:" << a << endl; 
+    cout << "Publisher:" << p << endl; 
+    cout << "Date Added:" << d << endl; 
+    cout << "Quantity-On-Hand:" << q << endl; 
+    cout << "Wholesale Cost:" << w << endl; 
+    cout << "Retail Price:" << r << endl; 
     cout << "\n**************************************************\n" << endl;
 }
  
