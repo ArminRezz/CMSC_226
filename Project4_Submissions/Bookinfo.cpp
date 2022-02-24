@@ -13,7 +13,7 @@
 using namespace std;
 
 // displays information about any given book// displays information about any given book
-void Bookinfo::bookInfo(string i, string t, string a, string p, string d, int q, double w, double r) {
+void bookInfo(string i, string t, string a, string p, string d, int q, double w, double r) {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
     cout << "\tBook Information\n" << endl;  
@@ -26,5 +26,6 @@ void Bookinfo::bookInfo(string i, string t, string a, string p, string d, int q,
     cout << "Wholesale Cost:" << w << endl; 
     cout << "Retail Price:" << r << endl; 
     cout << "\n**************************************************\n" << endl;
+    return;
 }
  

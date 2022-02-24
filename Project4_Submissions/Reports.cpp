@@ -12,7 +12,7 @@
 using namespace std;
 
 // Displays menu options for reports
-void Reports::reports() {
+void reports() {
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tReports\n" << endl; 
@@ -30,7 +30,7 @@ void Reports::reports() {
 }
 
 // Gets user selection and reroutes to corresponding function
-void Reports::handleUserChoice() {
+void handleUserChoice() {
 
     int choice = 0; 
     cout << "Enter your choice: ";
@@ -67,27 +67,27 @@ void Reports::handleUserChoice() {
 
 }
 
-void Reports::repListing() {
+void repListing() {
     cout << "You selected Inventory Listing." << endl;
     return; 
 }
-void Reports::repWholesale() {
+void repWholesale() {
     cout << "You selected Inventory Wholesale Value." << endl;
     return; 
 }
-void Reports::repRetail() {
+void repRetail() {
     cout << "You selected Inventory Retail Value." << endl;
     return; 
 }
-void Reports::repQty() {
+void repQty() {
     cout << "You selected Listing By Quantity." << endl;
     return; 
 }
-void Reports::repCost() {
+void repCost() {
     cout << "You selected Listing By Cost." << endl;
     return; 
 }
-void Reports::repAge() {
+void repAge() {
     cout << "You selected Listing By Age. " << endl;
     return; 
 }

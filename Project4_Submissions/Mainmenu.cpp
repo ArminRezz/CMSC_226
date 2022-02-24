@@ -7,11 +7,12 @@
 ** Due Date: 02/14/22
 ******************************************************************/
 
+#include "cashier.h"
+#include "bookinfo.h"
+#include "invmenu.h"
+#include "reports.h"
+
 #include <iostream>
-#include "Cashier.cpp"
-#include "Invmenu.cpp"
-#include "Reports.cpp"
-#include "Bookinfo.cpp"
 
 using namespace std; 
 
@@ -26,10 +27,6 @@ void displayMainMenu() {
 }
 
 int main() {
-
-    Cashier c; 
-    Invmenu i; 
-    Reports r; 
 
     int choice = 0;
     do {
@@ -48,13 +45,13 @@ int main() {
 
         switch(choice) {
         case 1: 
-            c.cashier(); 
+            cashier(); 
             break;
         case 2:
-            i.invMenu();
+            invMenu();
             break; 
         case 3:
-            r.reports();
+            reports();
             break;
         case 4:
             cout << "Thank you for coming to my store!!!" << endl; 

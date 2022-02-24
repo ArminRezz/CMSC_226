@@ -15,22 +15,22 @@
 using namespace std; 
 
 // calculates subtotal for purchase
-double Cashier::calcSubTotal() {
+double calcSubTotal() {
     return price * quantity; 
 }
 
 // claculates sales tax in dollars for purchase
-double Cashier::calcSalesTax() {
+double calcSalesTax() {
     return calcSubTotal() * SALES_TAX; 
 }
 
 // calculates total for purchase 
-double Cashier::calculateTotal() {
+double calculateTotal() {
     return calcSubTotal() + calcSalesTax();
 }
 
 // gathers user purchase information 
-void Cashier::cashier() {
+void cashier() {
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tCashier Module" << endl; 
@@ -49,7 +49,7 @@ void Cashier::cashier() {
 }
 
 // Displays purchase ticket and asks user if they want to do another transaction 
-void Cashier::displayTicket() {
+void displayTicket() {
 
      // Display reciept/ticket with all the information
     cout << "Serendipity Book Sellers\n" << endl; 

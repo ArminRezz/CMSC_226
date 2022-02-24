@@ -1,13 +1,7 @@
-// invmenu.h
+#include <iostream>
 #include <string>
 #pragma once
 
 using namespace std; 
 
-
-
-class Bookinfo
-{
-    public:
-        void bookInfo(string i, string t, string a, string p, string d, int q, double w, double r);
-};
+extern void bookInfo(string i, string t, string a, string p, string d, int q, double w, double r);

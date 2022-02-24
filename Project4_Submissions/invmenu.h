@@ -1,28 +1,23 @@
-// invmenu.h
-#include <string>
-#include "bookinfo.h"
 #pragma once
+#include "bookinfo.h"
 using namespace std; 
 
-const ARRAY_SIZE = 20;
-class Invmenu
-{
-    string isbn[ARRAY_SIZE]; 
-    string title[ARRAY_SIZE]; 
-    string author[ARRAY_SIZE]; 
-    string publisher[ARRAY_SIZE];
-    string dateAdded[ARRAY_SIZE];
-    int quantityOnHand[ARRAY_SIZE]; 
-    double wholesaleCost[ARRAY_SIZE];
-    double retailPrice[ARRAY_SIZE]; 
+const int ARRAY_SIZE = 20;
 
-    public:
-        void invMenu();
-        void handleUserChoice(); 
-        void lookUpBook();
-        void addBook();
-        void editBook();
-        void deleteBook();
-        int findBookIndex(string title);
-};
+extern string isbnArr[ARRAY_SIZE]; 
+extern string bookTitles[ARRAY_SIZE]; 
+extern string author[ARRAY_SIZE]; 
+extern string publisher[ARRAY_SIZE];
+extern string dateAdded[ARRAY_SIZE];
+extern int quantityOnHand[ARRAY_SIZE]; 
+extern double wholesaleCost[ARRAY_SIZE];
+extern double retailPrice[ARRAY_SIZE];
+
+extern void invMenu();
+extern void handleUser(); 
+extern void lookUpBook();
+extern void addBook();
+extern void editBook();
+extern void deleteBook();
+extern int findBookIndex(string title);
 

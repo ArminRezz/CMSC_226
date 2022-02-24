@@ -3,16 +3,13 @@
 #pragma once
 
 using namespace std; 
-class Reports
-{
-    public:
-        void reports();
-        void handleUserChoice();
-        void repListing();
-        void repWholesale();
-        void repRetail();
-        void repQty();
-        void repCost();
-        void repAge();
-};
+
+extern void reports();
+extern void handleUserChoice();
+extern void repListing();
+extern void repWholesale();
+extern void repRetail();
+extern void repQty();
+extern void repCost();
+extern void repAge();
 
