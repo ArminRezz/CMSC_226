@@ -7,9 +7,7 @@
 ** Due Date: 02/14/22
 ******************************************************************/
 
-#include <iostream>
 #include "reports.h"
-using namespace std;
 
 // Displays menu options for reports
 void reports() {
@@ -24,9 +22,9 @@ void reports() {
     cout << "6. Listing by Age" << endl; 
     cout << "7. Return to Main Menu\n" << endl; 
 
-    handleUserChoice();
-
     cout << "\n**************************************************\n" << endl;
+
+    handleUserChoice();
 }
 
 // Gets user selection and reroutes to corresponding function

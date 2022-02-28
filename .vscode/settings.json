@@ -4,5 +4,13 @@
         "string": "cpp",
         "iosfwd": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.configureOnOpen": true,
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions",
+            "binaryPath": "/Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions/main",
+            "binaryArgs": []
+        }
+    ]
 }

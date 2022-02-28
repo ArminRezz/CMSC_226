@@ -6,13 +6,10 @@
 ** Student: Armin Rezaiyan-Nojani
 ** Due Date: 02/14/22
 ******************************************************************/
-
-#include <iostream>
-#include <string>
 #include "invmenu.h"
+#include "bookinfo.h"
 
-using namespace std;
-
+const int ARRAY_SIZE = 20;
 // Displays menu options for inventory
 void invMenu() {  
     cout << "\n**************************************************\n" << endl;
@@ -83,10 +80,10 @@ void addBook() {
     int index = findBookIndex("");
 
     // Get book information
-    if (index != 0 && index < ARRAY_SIZE) {
+    if (index < ARRAY_SIZE && index >= 0) {
         cout << "Book title: " << endl;
         cin >> bookTitles[index];
-        cout << "isbnArr number: " << endl;
+        cout << "ISBN number: " << endl;
         cin >> isbnArr[index];
         cout << "Author’s name: " << endl;
         cin >> author[index];
@@ -116,7 +113,7 @@ void editBook() {
     // find book
     int index = findBookIndex(title);
 
-    if (index == 0) {
+    if (index == -1) {
         cout << "Book was not found!" << endl;
     } else {
         bookInfo(isbnArr[index], bookTitles[index], author[index], publisher[index], dateAdded[index], quantityOnHand[index], wholesaleCost[index], retailPrice[index]);
@@ -126,7 +123,7 @@ void editBook() {
         cin >> field;
 
         if (field == "isbn") {
-            cout << "Enter new isbnArr: " << endl;
+            cout << "Enter new ISBN: " << endl;
             cin >> isbnArr[index];
         }
         else if (field == "title") {
@@ -174,7 +171,7 @@ void deleteBook() {
     int index = findBookIndex(title);
 
     // Get book information
-    if (index < ARRAY_SIZE) {
+    if (index < ARRAY_SIZE && index > 0) {
         bookInfo(isbnArr[index], bookTitles[index], author[index], publisher[index], dateAdded[index], quantityOnHand[index], wholesaleCost[index], retailPrice[index]);
     } else {
         cout << "Sorry, could not find that book in the inventory!";
@@ -200,7 +197,7 @@ void deleteBook() {
 }
 
 int findBookIndex(string title) {
-    int index = 0;
+    int index = -1;
     for (int i = 0; i < ARRAY_SIZE; i++) {
         if (bookTitles[i] == title) {
             index = i; 

@@ -7,12 +7,17 @@
 ** Due Date: 02/14/22
 ******************************************************************/
 
-#include <iostream>
-#include <iomanip>
-#include <string> 
 #include "cashier.h"
 
-using namespace std; 
+const double SALES_TAX = 0.06;  
+
+string date; 
+int quantity; 
+string isbn; 
+string title;
+double price; 
+double total; 
+
 
 // calculates subtotal for purchase
 double calcSubTotal() {
@@ -31,6 +36,7 @@ double calculateTotal() {
 
 // gathers user purchase information 
 void cashier() {
+    
     cout << "\n**************************************************\n" << endl;
     cout << "Serendipity Booksellers" << endl; 
     cout << "\tCashier Module" << endl; 

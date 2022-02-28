@@ -6,34 +6,51 @@
 ** Student: Armin Rezaiyan-Nojani
 ** Due Date: 02/14/22
 ******************************************************************/
+#include <iostream>
 
 #include "cashier.h"
 #include "bookinfo.h"
 #include "invmenu.h"
 #include "reports.h"
 
-#include <iostream>
-
 using namespace std; 
 
-void displayMainMenu() {
-    cout << "\n**************************************************\n" << endl;
-    cout << "Serendipity Booksellers" << endl; 
-    cout << "\tMain Menu\n" << endl; 
-    cout << "1. Cashier Module" << endl; 
-    cout << "2. Inventory Database Module" << endl; 
-    cout << "3. Report Module" << endl; 
-    cout << "4. Exit" << endl; 
-}
+const int ARRAY_SIZE = 20; 
+
+string isbnArr[ARRAY_SIZE]; 
+string bookTitles[ARRAY_SIZE]; 
+string author[ARRAY_SIZE]; 
+string publisher[ARRAY_SIZE];
+string dateAdded[ARRAY_SIZE];
+int quantityOnHand[ARRAY_SIZE]; 
+double wholesaleCost[ARRAY_SIZE];
+double retailPrice[ARRAY_SIZE];
+
+void MainMenu();
 
 int main() {
+
+   MainMenu();
+   return 0; 
+}
+
+void MainMenu() {
 
     int choice = 0;
     do {
 
-        displayMainMenu(); 
+        cout << "\n**************************************************\n" << endl;
+        cout << "Serendipity Booksellers" << endl; 
+        cout << "\tMain Menu\n" << endl; 
+        cout << "1. Cashier Module" << endl; 
+        cout << "2. Inventory Database Module" << endl; 
+        cout << "3. Report Module" << endl; 
+        cout << "4. Exit" << endl; 
+        cout << "\n**************************************************\n" << endl;
+
         cout << "Enter your choice: ";
         cin >> choice;
+
         while (choice <= 0 || choice > 4) {
             cout << "Please enter number in range 1 - 4" << endl;
             cout << "Enter your choice: "; 
@@ -41,25 +58,22 @@ int main() {
         }
 
         cout << "\nYou chose option " << choice << endl; 
-        cout << "\n**************************************************\n" << endl;
 
         switch(choice) {
-        case 1: 
-            cashier(); 
-            break;
-        case 2:
-            invMenu();
-            break; 
-        case 3:
-            reports();
-            break;
-        case 4:
+            case 1: 
+                cashier(); 
+                break;
+            case 2:
+                invMenu();
+                break; 
+            case 3:
+                reports();
+                break;
+            case 4:
             cout << "Thank you for coming to my store!!!" << endl; 
             cout << "\n**************************************************\n" << endl;
             break; 
         }
 
     } while(choice != 4);
-    
-    return 0; 
 }

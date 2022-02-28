@@ -7,12 +7,9 @@
 ** Due Date: 02/14/22
 ******************************************************************/
 
-#include <iostream>
 #include "bookinfo.h"
 
-using namespace std;
-
-// displays information about any given book// displays information about any given book
+// displays information about any given book 
 void bookInfo(string i, string t, string a, string p, string d, int q, double w, double r) {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
