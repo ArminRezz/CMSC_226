@@ -7,7 +7,7 @@
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue Mar  1 09:40:57 2022
+# Make data base, printed on Mon Mar 21 10:59:44 2022
 
 # Variables
 
@@ -42,7 +42,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-0106e0c0-97de-4172-8a71-03f855b0a644.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-af50b5ce-df43-4692-956c-ed78cc687793.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -58,7 +58,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.e8dZu4gPUQ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.3JvLzsB0Vo/Listeners
 # environment
 JDK_HOME = /Users/arminrezaiyan/.jenv/versions/10.0
 # automatic
@@ -70,13 +70,13 @@ PWD = /Users/arminrezaiyan/Desktop/CMSC_226
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/arminrezaiyan
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arminrezaiyan/Library/Application Support/Code/CachedData/f80445acd5a3dadef24aa209168452a3d97cc326
+VSCODE_CODE_CACHE_PATH = /Users/arminrezaiyan/Library/Application Support/Code/CachedData/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
 # environment
 LOGNAME = arminrezaiyan
 # environment
@@ -118,7 +118,7 @@ TMPDIR = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arminrezaiyan/Library/Application Support/Code/1.64.2-main.sock
+VSCODE_IPC_HOOK = /Users/arminrezaiyan/Library/Application Support/Code/1.65.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -128,7 +128,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/arminrezaiyan/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.39169652.39169658
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.40506672.40506678
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -154,7 +154,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 38705
+VSCODE_PID = 11875
 # variable set hash-table stats:
 # Load=72/1024=7%, Rehash=0, Collisions=2/96=2%
 
@@ -278,7 +278,7 @@ Cashier.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Tue Mar  1 09:40:57 2022
+# Finished Make data base on Mon Mar 21 10:59:44 2022
 
  
 make: *** No rule to make target `all'.  Stop.
