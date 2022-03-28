@@ -1,4 +1,4 @@
-// invmenu.h
+// cashier.h
 #pragma once
 
 #include <iostream>
@@ -15,14 +15,8 @@ extern int quantityOnHand[];
 extern double wholesaleCost[];
 extern double retailPrice[];
 
-void reports();
-void handleUserChoice();
-void repListing();
-void repWholesale();
-void repRetail();
-void repQty();
-void repCost();
-void repAge();
-void selectionSort(double[]);
-void selectionSort(int[]);
-void printTotal(double[]);  
+void cashier();
+void displayTicket();
+double calcSubTotal();
+double calcSalesTax();
+double calculateTotal();

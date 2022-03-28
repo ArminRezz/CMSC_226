@@ -59,16 +59,16 @@ void handleUser() {
 void lookUpBook() {
     cout << "You selected Look up book." << endl;
     cout << "Enter bookTitles of book: " << endl;
-    string title;
-    cin >> title;
-
-    // find book index 
-    int index = findBookIndex(title);
-
-    if (bookTitles[index] == "") {
-        cout << "Book was not found!" << endl;
-    } else {
-        bookInfo(isbnArr[index], bookTitles[index], author[index], publisher[index], dateAdded[index], quantityOnHand[index], wholesaleCost[index], retailPrice[index]);
+    getline(title, 51);
+     
+    int row; 
+    for (row = 0; row < ARRAY_SIZE; row++) {
+        if (strstr(bookTitles[row], title)){
+            bookInfo(isbnArr[row], bookTitles[row], author[row], publisher[row], dateAdded[row], quantityOnHand[row], wholesaleCost[row], retailPrice[row]);
+        }
+    }
+    if (row == ARRAY_SIZE-1) {
+        cout << "That book was not found!" << endl;
     }
     return;
 }
@@ -77,27 +77,37 @@ void addBook() {
     cout << "You selected add book." << endl;
 
     // find empty space in inventory
-    int index = findBookIndex("");
+    int i; 
+    for (i = 0; i < ARRAY_SIZE; i++) {
+        if (bookTitles[i][0] == 0) {
+            cout << "Book title: " << endl;
+            getline(bookTitles[i], 51);
+            strUpper(bookTitles[i]);
 
-    // Get book information
-    if (index < ARRAY_SIZE && index >= 0) {
-        cout << "Book title: " << endl;
-        cin >> bookTitles[index];
-        cout << "ISBN number: " << endl;
-        cin >> isbnArr[index];
-        cout << "Author’s name: " << endl;
-        cin >> author[index];
-        cout << "Publisher’s name: " << endl;
-        cin >> publisher[index];
-        cout << "The date the book was added to the inventory: " << endl;
-        cin >> dateAdded[index];
-        cout << "The quantity of the book being added: " << endl;
-        cin >> quantityOnHand[index];
-        cout << "The wholesale cost of the book: " << endl;
-        cin >> wholesaleCost[index];
-        cout << "The retail price of the book: " << endl;
-        cin >> retailPrice[index];
-    } else {
+            cout << "ISBN number: " << endl;
+            getline(isbnArr[i], 14);
+            strUpper(isbnArr[i]);
+
+            cout << "Author’s name: " << endl;
+            getline(author[i], 31);
+            strUpper(author[i]);
+
+            cout << "Publisher’s name: " << endl;
+            getline(publisher[i], 31);
+            strUpper(publisher[i]);
+
+            cout << "The date the book was added to the inventory: " << endl;
+            getline(dateAdded[i], 11);
+
+            cout << "The quantity of the book being added: " << endl;
+            cin >> quantityOnHand[i];
+            cout << "The wholesale cost of the book: " << endl;
+            cin >> wholesaleCost[i];
+            cout << "The retail price of the book: " << endl;
+            cin >> retailPrice[i];
+        }
+    }
+    if (i == ARRAY_SIZE-1) {
         cout << "Sorry, no more space in out inventory, thanks for using our bookstore!" << endl;
     }
     return;
@@ -205,4 +215,12 @@ int findBookIndex(string title) {
         }
     }
     return index;
+}
+
+void strUpper(char* str) {
+    int i = 0; 
+    while(str[i] != "/0") {
+        str[i].toUpper(); 
+        i++;
+    }
 }

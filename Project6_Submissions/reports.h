@@ -6,11 +6,11 @@
 
 using namespace std; 
 
-extern string isbnArr[]; 
-extern string bookTitles[]; 
-extern string author[]; 
-extern string publisher[];
-extern string dateAdded[];
+extern char isbnArr[][];
+extern char bookTitles[][];
+extern char author[][];
+extern char publisher[][];
+extern char dateAdded[][];
 extern int quantityOnHand[]; 
 extern double wholesaleCost[];
 extern double retailPrice[];
