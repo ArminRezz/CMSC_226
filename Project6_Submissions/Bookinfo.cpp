@@ -10,7 +10,7 @@
 #include "bookinfo.h"
 
 // displays information about any given book 
-void bookInfo(char[] i, char[] t, char[] a, char[] p, char[] d, int q, double w, double r) {
+void bookInfo(char i[14], char t[51], char a[31], char p[31], char d[11], int q, double w, double r) {
     cout << "\n**************************************************\n" << endl;
     cout << "\tSerendipity Booksellers" << endl; 
     cout << "\tBook Information\n" << endl;  
