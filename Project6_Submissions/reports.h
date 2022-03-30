@@ -2,18 +2,10 @@
 #pragma once
 
 #include <iostream>
+#include <cctype>
 #include <iomanip>
 
 using namespace std; 
-
-extern char isbnArr[][];
-extern char bookTitles[][];
-extern char author[][];
-extern char publisher[][];
-extern char dateAdded[][];
-extern int quantityOnHand[]; 
-extern double wholesaleCost[];
-extern double retailPrice[];
 
 void reports();
 void handleUserChoice();

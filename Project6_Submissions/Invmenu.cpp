@@ -59,8 +59,10 @@ void handleUser() {
 void lookUpBook() {
     cout << "You selected Look up book." << endl;
     cout << "Enter bookTitles of book: " << endl;
-    getline(title, 51);
-     
+    char title[51];
+    cin.getline(title, 51);
+    cin.ignore();
+    
     int row; 
     for (row = 0; row < ARRAY_SIZE; row++) {
         if (strstr(bookTitles[row], title)){
@@ -81,23 +83,23 @@ void addBook() {
     for (i = 0; i < ARRAY_SIZE; i++) {
         if (bookTitles[i][0] == 0) {
             cout << "Book title: " << endl;
-            getline(bookTitles[i], 51);
+            cin.ignore();
+            cin.getline(bookTitles[i], 51);
             strUpper(bookTitles[i]);
-
+            
             cout << "ISBN number: " << endl;
-            getline(isbnArr[i], 14);
+            cin.getline(isbnArr[i], 14);
             strUpper(isbnArr[i]);
 
             cout << "Author’s name: " << endl;
-            getline(author[i], 31);
+            cin.getline(author[i], 31);
             strUpper(author[i]);
 
             cout << "Publisher’s name: " << endl;
-            getline(publisher[i], 31);
-            strUpper(publisher[i]);
+            cin.getline(publisher[i], 31);
 
             cout << "The date the book was added to the inventory: " << endl;
-            getline(dateAdded[i], 11);
+            cin.getline(dateAdded[i], 11);
 
             cout << "The quantity of the book being added: " << endl;
             cin >> quantityOnHand[i];
@@ -105,6 +107,7 @@ void addBook() {
             cin >> wholesaleCost[i];
             cout << "The retail price of the book: " << endl;
             cin >> retailPrice[i];
+            i = ARRAY_SIZE;
         }
     }
     if (i == ARRAY_SIZE-1) {
@@ -116,9 +119,9 @@ void addBook() {
 void editBook() {
     // get book bookTitles
     cout << "You selected edit book." << endl;
-    cout << "Enter bookTitles of book: " << endl;
-    string title;
-    cin >> title;
+    cout << "Enter book title: " << endl;
+    char title[51];
+    cin.getline(title, 51);
 
     // find book
     int index = findBookIndex(title);
@@ -134,23 +137,32 @@ void editBook() {
 
         if (field == "isbn") {
             cout << "Enter new ISBN: ";
-            cin >> isbnArr[index];
+            cin.ignore();
+            cin.getline(isbnArr[index], 14);
+            strUpper(isbnArr[index]);
         }
         else if (field == "title") {
             cout << "Enter new title: ";
-            cin >> bookTitles[index];
+            cin.ignore();
+            cin.getline(bookTitles[index], 51);
+            strUpper(bookTitles[index]);
         }
         else if (field == "author") {
             cout << "Enter new author: ";
-            cin >> author[index];
+            cin.ignore();
+            cin.getline(author[index], 31);
+            strUpper(author[index]);
         }
         else if (field == "publisher") {
             cout << "Enter new publisher: ";
-            cin >> publisher[index];
+            cin.ignore();
+            cin.getline(publisher[index], 31);
+            strUpper(publisher[index]);
         }
         else if (field == "date"){
             cout << "Enter new date: ";
-            cin >> dateAdded[index];
+            cin.ignore();
+            cin.getline(dateAdded[index], 11);
         }
         else if (field == "quantity") {
             cout << "Enter new quantity: ";
@@ -171,45 +183,43 @@ void editBook() {
 }
 
 void deleteBook() {
-    // get bookTitles
-    cout << "You selected delete book." << endl;
-    cout << "Enter bookTitles of book you want to remove: " << endl; 
-    string title;
-    cin >> title; 
+    // get book bookTitles
+    cout << "You selected edit book." << endl;
+    cout << "Enter book title: " << endl;
+    cin.ignore();
+    char title[51];
+    cin.getline(title, 51);
 
-    // Find book
+    // find book
     int index = findBookIndex(title);
 
-    // Get book information
-    if (index < ARRAY_SIZE && index > 0) {
-        bookInfo(isbnArr[index], bookTitles[index], author[index], publisher[index], dateAdded[index], quantityOnHand[index], wholesaleCost[index], retailPrice[index]);
+    if (index == -1) {
+        cout << "Book was not found!" << endl;
     } else {
-        cout << "Sorry, could not find that book in the inventory!";
-    }
+        bookInfo(isbnArr[index], bookTitles[index], author[index], publisher[index], dateAdded[index], quantityOnHand[index], wholesaleCost[index], retailPrice[index]);
+        cout << "Are you sure you want to remove this book? (y/n): " << endl;
+        char remove; 
+        cin >> remove; 
 
-    // ask user if they want to remove book, if yes, remove book, if no, don't change anything
-    cout << "Are you sure you want to remove this book? (y/n): " << endl;
-    char remove; 
-    cin >> remove; 
-
-    if (remove == 'Y' || remove == 'y' ) {
-        isbnArr[index] = "";
-        bookTitles[index] = "";
-        author[index] = ""; 
-        publisher[index] = "";
-        dateAdded[index] = "";
-        quantityOnHand[index] = 0;
-        wholesaleCost[index] = 0.0;
-        retailPrice[index] = 0.0;
+        if (remove == 'Y' || remove == 'y' ) {
+            strcpy(bookTitles[index], "");
+            strcpy(isbnArr[index], "");
+            strcpy(author[index], "");
+            strcpy(publisher[index], "");
+            strcpy(dateAdded[index], "");
+            quantityOnHand[index] = 0;
+            wholesaleCost[index] = 0.0;
+            retailPrice[index] = 0.0;
+            cout << "Book succsessfully deleted!" << endl; 
+        }
     }
-    cout << "Book succsessfully deleted!" << endl; 
     return;
 }
 
-int findBookIndex(string title) {
+int findBookIndex(char* title) {
     int index = -1;
     for (int i = 0; i < ARRAY_SIZE; i++) {
-        if (bookTitles[i] == title) {
+        if (strstr(bookTitles[i], title)) {
             index = i; 
             i = ARRAY_SIZE;
         }
@@ -218,9 +228,8 @@ int findBookIndex(string title) {
 }
 
 void strUpper(char* str) {
-    int i = 0; 
-    while(str[i] != "/0") {
-        str[i].toUpper(); 
-        i++;
+    while (*str != 0) {
+        *str = toupper(*str);
+        str++;
     }
 }

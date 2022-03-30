@@ -8,6 +8,9 @@
 ******************************************************************/
 
 #include "reports.h"
+#include "invmenu.h"
+#include "bookinfo.h"
+
 const int ARRAY_SIZE = 20;
 int indicies[ARRAY_SIZE]; // holds indexes of sorted array 
 
@@ -23,7 +26,6 @@ void reports() {
     cout << "5. Listing by Cost" << endl; 
     cout << "6. Listing by Age" << endl; 
     cout << "7. Return to Main Menu\n" << endl; 
-
     cout << "\n**************************************************\n" << endl;
 
     handleUserChoice();
@@ -73,13 +75,13 @@ void repListing() {
     cout << left << setw(20) << "Publisher" << setw(20) << "Data Added" << setw(20) <<  "Quantity on hand";  
     cout << left << setw(20) << "Wholesale cost" << setw(20) << "Retail price" << endl; 
     for (int i = 0; i < ARRAY_SIZE; i++) {
-       if (isbnArr[i] == "") {
-           i = ARRAY_SIZE; 
-       } else {
-           cout << left << setw(20) << bookTitles[i] << setw(20) << isbnArr[i] << setw(20) << author[i]; 
-           cout << setw(20) << publisher[i] << setw(20) << dateAdded[i] << setw(20) <<  quantityOnHand[i];  
-           cout << setw(20) << wholesaleCost[i] << setw(20) << retailPrice[i] << endl; 
-       }
+        if (bookTitles[i][0] == 0) {
+            i = ARRAY_SIZE; 
+        } else {
+            cout << left << setw(20) << bookTitles[i] << setw(20) << isbnArr[i] << setw(20) << author[i]; 
+            cout << setw(20) << publisher[i] << setw(20) << dateAdded[i] << setw(20) <<  quantityOnHand[i];  
+            cout << setw(20) << wholesaleCost[i] << setw(20) << retailPrice[i] << endl; 
+        }
     }
     return; 
 }
@@ -87,7 +89,7 @@ void repListing() {
 void repWholesale() {
     cout << left << setw(20) << "Title" << setw(20) << "ISBN" << setw(20) << "Quantity" << setw(20) << "Wholesale Cost" << endl;  
     for (int i = 0; i < ARRAY_SIZE; i++) {
-       if (isbnArr[i] == "") {
+       if (bookTitles[i][0] == 0) {
            i = ARRAY_SIZE; 
        } else {
            cout << left << setw(20) << bookTitles[i] << setw(20) << isbnArr[i] << setw(20) << quantityOnHand[i]  << setw(20) << wholesaleCost[i] << endl;  
@@ -100,7 +102,7 @@ void repWholesale() {
 void repRetail() {
     cout << left << setw(20) << "Title" << setw(20) << "ISBN" << setw(20) << "Quantity" << setw(20) << "Retail Price" << endl;  
     for (int i = 0; i < ARRAY_SIZE; i++) {
-       if (isbnArr[i] == "") {
+       if (bookTitles[i][0] == 0) {
            i = ARRAY_SIZE; 
        } else {
            cout << left << setw(20) << bookTitles[i] << setw(20) << isbnArr[i] << setw(20) << quantityOnHand[i]  << setw(20) << retailPrice[i] << endl;
@@ -140,7 +142,7 @@ void repAge() {
     cout << left << setw(20) << "Title" << setw(20) << "ISBN" << setw(20) << "Quantity" << setw(20) << "Date Added" << endl;  
 
     for (int i = ARRAY_SIZE; i > 0; i--) {
-       if (isbnArr[i] != "") {
+       if (bookTitles[i][0] != 0) {
             cout << left << setw(20) << bookTitles[i] << setw(20) << isbnArr[i] << setw(20) << quantityOnHand[i] << setw(20) << dateAdded[i] << endl;  
        }
     }

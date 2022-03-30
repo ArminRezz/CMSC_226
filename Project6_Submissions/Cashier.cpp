@@ -8,6 +8,7 @@
 ******************************************************************/
 
 #include "cashier.h"
+#include "invmenu.h"
 
 const double SALES_TAX = 0.06;
 const int ARRAY_SIZE = 20;  

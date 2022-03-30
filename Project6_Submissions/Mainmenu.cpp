@@ -7,6 +7,8 @@
 ** Due Date: 02/14/22
 ******************************************************************/
 #include <iostream>
+#include <iomanip>
+#include <cctype>
 #include "invmenu.h"
 #include "cashier.h"
 #include "bookinfo.h"
@@ -16,14 +18,15 @@ using namespace std;
 
 const int ARRAY_SIZE = 20; 
 
-extern char isbnArr[ARRAY_SIZE][14];
-extern char bookTitles[ARRAY_SIZE][51];
-extern char author[ARRAY_SIZE][31];
-extern char publisher[ARRAY_SIZE]31];
-extern char dateAdded[ARRAY_SIZE][11];
-extern int quantityOnHand[ARRAY_SIZE]; 
-extern double wholesaleCost[ARRAY_SIZE];
-extern double retailPrice[ARRAY_SIZE];
+//creating arrays for the book info
+char bookTitles[ARRAY_SIZE][51];
+char isbnArr[ARRAY_SIZE][14];
+char author[ARRAY_SIZE][31];
+char publisher[ARRAY_SIZE][31];
+char dateAdded[ARRAY_SIZE][11];
+int quantityOnHand[ARRAY_SIZE];
+double wholesaleCost[ARRAY_SIZE];
+double retailPrice[ARRAY_SIZE];
 
 void MainMenu();
 
