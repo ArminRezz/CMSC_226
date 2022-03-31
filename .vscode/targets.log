@@ -6,11 +6,8 @@
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
- 
 
-# Make data base, printed on Sun Mar 27 22:35:54 2022
+# Make data base, printed on Thu Mar 31 18:22:15 2022
 
 # Variables
 
@@ -41,11 +38,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-7f7a5000-9ed7-4157-b2f6-3244219632c4.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-f9635f13-e6d2-43f6-a899-60ecf8f72ef2.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+PATH = /usr/bin:/bin:/usr/sbin:/sbin
 # environment
 LaunchInstanceID = CE56042D-3268-4E39-9348-E6A6E36A1CC0
 # environment
@@ -149,7 +146,6 @@ VSCODE_PID = 559
 
 # No pattern-specific variable values.
 
- 
 # Directories
 
 
@@ -266,6 +262,8 @@ Cashier.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Sun Mar 27 22:35:54 2022
+# Finished Make data base on Thu Mar 31 18:22:15 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
