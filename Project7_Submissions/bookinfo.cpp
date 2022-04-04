@@ -1,76 +1,15 @@
-// ********************************************************
-// Starting Out with C++                                  *
-// From Control Stuctures through Objects                 *
-// seventh edition                                        *
-//                                                        *
-// Chapter 10 Characters, C-Strings, and More About       *
-//            the String Class                            *
-//                                                        *
-// Serendipity Booksellers Software Development           *
-// Project — Part 10: A Problem-Solving Exercise          *
-//                                                        *
-// Multi-File Program                                     *
-// ********************************************************
-#include <iostream>
-#include <iomanip>
 #include "bookinfo.h"
-using namespace std;
 
-const int    STR_SIZE = 51;     // represents the maximum string size
-const int	 PRECISION	 =  2;	// the decimal precision
+void bookInfo(char isbn[14], char title[51], char author[31], char publisher[31], char dateAdded[11], int qtyOnHand, double wholesale, double retail, bool showInfo) {
 
-//********************************************
-// bookInfo function                         *
-//********************************************
-
-void bookInfo(char isbn[STR_SIZE], char title[STR_SIZE], char author[STR_SIZE], 
-			  char publisher[STR_SIZE], char date[STR_SIZE], int qty,
-			  double wholeSale, double retail)
-{
-	// display company name and screen title
-	cout << "\t\t\tSerendipity Booksellers\n";
-	cout << "\t\t\t    Book Information\n\n";
-
-	// display information items
-	cout << "ISBN: " 
-		 << isbn 
-		 << "\n";
-
-	cout << "Title: " 
-		 << title 
-		 << "\n";
-
-	cout << "Author: " 
-		 << author 
-		 << "\n";
-
-	cout << "Publisher: " 
-		 << publisher 
-		 << "\n";
-
-	cout << "Date Added: " 
-		 << date	
-		 << "\n";
-
-	cout << "Quantity-On-Hand: " 
-		 << qty 
-		 << "\n";
-
-	cout << "Wholesale Cost: " 
-		 << fixed 
-		 << showpoint 
-		 << setprecision(PRECISION) 
-		 << wholeSale	
-		 << "\n";
-
-	cout << "Retail Price: " 
-		 << fixed 
-		 << showpoint 
-		 << setprecision(PRECISION) 
-		 << retail 
-		 << "\n";
-
-	cout << endl << endl;
-
-}	// end function bookInfo
-
+    //printing book info
+    if (showInfo) {cout << setw(30) << right << "Serendipity Booksellers\n" << setw(28) << "Book Information\n\n";}
+    cout << "ISBN:" << setw(30) << right << isbn << endl; 
+    cout << "Title:" << setw(29) << right << title << endl;
+    cout << "Author:" << setw(28) << right << author << endl;
+    cout << "Publisher:" << setw(25) << right << publisher << endl;
+    cout << "Date Added:" << setw(24) << right << dateAdded << endl;
+    cout << "Quantity:" << setw(26) << right << qtyOnHand << endl;
+    cout << "Wholesale Cost:" << setw(20) << right << wholesale << endl;
+    cout << "Retail Price:" << setw(22) << right << retail << endl << endl;
+}

@@ -6,8 +6,9 @@
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Thu Mar 31 18:22:15 2022
+# Make data base, printed on Sat Apr  2 22:08:04 2022
 
 # Variables
 
@@ -38,13 +39,13 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-f9635f13-e6d2-43f6-a899-60ecf8f72ef2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-509f82e5-5d2f-4ab9-8b9a-79f357e79f58.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/bin:/bin:/usr/sbin:/sbin
+PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # environment
-LaunchInstanceID = CE56042D-3268-4E39-9348-E6A6E36A1CC0
+LaunchInstanceID = 0D57D8FD-A3B2-42E7-8D55-887D27908D80
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -52,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Ydibe8B0SQ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.s8dCJ81mb0/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -118,6 +119,9 @@ XPC_SERVICE_NAME = application.com.microsoft.VSCode.40506672.40506678
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
+ 
+make: *** No rule to make target `all'.  Stop.
+
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
@@ -126,7 +130,7 @@ MAKEFILES :=
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a7
+SECURITYSESSIONID = 186aa
 # automatic
 ^F = $(notdir $^)
 # default
@@ -138,7 +142,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 559
+VSCODE_PID = 585
 # variable set hash-table stats:
 # Load=64/1024=6%, Rehash=0, Collisions=1/88=1%
 
@@ -262,8 +266,6 @@ Cashier.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Thu Mar 31 18:22:15 2022
+# Finished Make data base on Sat Apr  2 22:08:04 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

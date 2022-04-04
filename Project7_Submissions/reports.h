@@ -1,23 +1,17 @@
-// ********************************************************
-// Starting Out with C++                                  *
-// From Control Stuctures through Objects                 *
-// seventh edition                                        *
-//                                                        *
-// Chapter 10 Characters, C-Strings, and More About       *
-//            the String Class                            *
-//                                                        *
-// Serendipity Booksellers Software Development           *
-// Project — Part 10: A Problem-Solving Exercise          *
-//                                                        *
-// Multi-File Program                                     *
-// ********************************************************
-// Prototypes for the functions in the
-// reports.cpp file
+#ifndef REPORTS_H
+#define REPORTS_H
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//prototypes
+void report();
 void repListing();
 void repWholesale();
 void repRetail();
 void repQty();
 void repCost();
 void repAge();
-void reports();
 
+#endif
