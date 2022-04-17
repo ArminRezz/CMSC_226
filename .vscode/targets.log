@@ -6,12 +6,8 @@
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Mon Apr 11 17:14:18 2022
- 
+# Make data base, printed on Sat Apr 16 11:47:50 2022
 
 # Variables
 
@@ -42,11 +38,13 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-1d159ea1-65f9-40a1-b8e0-8f06acaa8732.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-60068615-b35d-4b40-a860-befb1c11f908.sock
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+# environment
+LaunchInstanceID = 96BCE58C-F5EC-498F-933C-D110FB69ED24
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -54,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0teaQEuG8o/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.5wRF8Ugzrs/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -70,7 +68,7 @@ HOME = /Users/arminrezaiyan
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arminrezaiyan/Library/Application Support/Code/CachedData/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
+VSCODE_CODE_CACHE_PATH = /Users/arminrezaiyan/Library/Application Support/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
 # environment
 LOGNAME = arminrezaiyan
 # environment
@@ -104,7 +102,7 @@ TMPDIR = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arminrezaiyan/Library/Application Support/Code/1.65.2-main.sock
+VSCODE_IPC_HOOK = /Users/arminrezaiyan/Library/Application Support/Code/1.66.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -112,7 +110,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.40506672.40506678
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.41564118.41564124
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -127,6 +125,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # default
@@ -138,9 +138,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 21718
+VSCODE_PID = 725
 # variable set hash-table stats:
-# Load=62/1024=6%, Rehash=0, Collisions=1/86=1%
+# Load=64/1024=6%, Rehash=0, Collisions=1/88=1%
 
 # Pattern-specific Variable Values
 
@@ -262,6 +262,8 @@ Cashier.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Mon Apr 11 17:14:18 2022
+# Finished Make data base on Sat Apr 16 11:47:50 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
