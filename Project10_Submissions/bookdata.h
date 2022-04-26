@@ -48,6 +48,5 @@ public:
 	// removes a book from inventory and writes the changes made into the inventory file
     // BookData &, fstream &, int
 	void   removeBook  ();	
-	bool bookMatch(string); 
 };
 #endif

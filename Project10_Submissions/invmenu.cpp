@@ -104,7 +104,7 @@ void addBook() {
 }
 
 //finds book in the inventory
-void lookUpBook() {
+void lookUpBook(){
     char searchBook[51];
     cout << "What book do you want to search for? ";
     cin.ignore();
@@ -112,7 +112,7 @@ void lookUpBook() {
     strUpper(searchBook);
     //for loop to search the arrays for the book
     for (int i = 0; i < SIZE; i++) {
-        if (books[i].bookMatch(searchBook)) {
+        if (strstr(books[i].getTitle(), searchBook)) {
             cout << "Possible match found: " << books[i].getTitle() << endl;
             cout << "Is this correct? (y/n): ";
             char choice;
@@ -143,7 +143,7 @@ void editBook() {
     cin.getline(editBook, 51);
     //for loop to search the arrays for the book to edit
     for (int i = 0; i < SIZE; i++) {
-        if (books[i].bookMatch(editBook)) {
+        if (strstr(books[i].getTitle(), editBook)) {
             cout << "Possible match found: " << books[i].getTitle() << endl;
             cout << "Is this correct? (y/n): ";
             char cont;
@@ -236,7 +236,7 @@ void deleteBook() {
     cin.getline(deleteBook, 51);
     //for loop to search the arrays for the book to delete
     for (int i = 0; i < SIZE; i++) {
-        if (books[i].bookMatch(deleteBook)) {
+        if (strstr(books[i].getTitle(), deleteBook)) {
             cout << "Book " << books[i].getTitle() << " has been deleted.\n";
             books[i].removeBook();
             return;

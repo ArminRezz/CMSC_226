@@ -1,6 +1,10 @@
 #include "bookdata.h"
 #include "strupper.h"
 
+BookData::BookData() {
+
+}
+
 // title
 void BookData::setTitle(char* title) {
     strUpper(title);
@@ -77,7 +81,7 @@ double BookData::getRetail() {
 }
 
 // check if book is empty
-int BookData::isEmpty() {
+int BookData::isEmpty(int i) {
     return (this->title[0] == 0) ? 1 : 0;
 }
 
@@ -86,8 +90,4 @@ int BookData::isEmpty() {
 void BookData::removeBook() {
     this->title[0] = 0; 
     this->isbn[0] = 0;
-}
-
-bool BookData bookMatch(string title) {
-    return strstr(this->title, title);
 }
