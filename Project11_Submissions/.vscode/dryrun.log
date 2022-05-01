@@ -1,0 +1,5 @@
+/usr/bin/make -f /Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions/Makefile -C /Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions --dry-run --keep-going --print-directory
+make: Entering directory `/Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions'
+make: `main' is up to date.
+make: Leaving directory `/Users/arminrezaiyan/Desktop/CMSC_226/Project4_Submissions'
+ 
