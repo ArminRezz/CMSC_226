@@ -9,7 +9,17 @@ using namespace std;
 class SoldBook : public InventoryBook 
 {
 private:
+    static double taxRate; 
+    static double total; 
+    int qtySold; 
+    double tax; 
+    double subtotal; 
 public:
 	SoldBook();	// the default constructor	
+    double getTotal() {
+        return total; 
+    }
+
+}
 };
 #endif

@@ -39,15 +39,3 @@ void InventoryBook::setRetail(double price) {
 double InventoryBook::getRetail() {
     return retail;
 }
-
-// check if book is empty
-int InventoryBook::isEmpty(int i) {
-    return (this->title[0] == 0) ? 1 : 0;
-}
-
-// remove book
-//void Bookdata::removeBook(BookData &book, fstream &file, int i) {
-void InventoryBook::removeBook() {
-    this->title[0] = 0; 
-    this->isbn[0] = 0;
-}
