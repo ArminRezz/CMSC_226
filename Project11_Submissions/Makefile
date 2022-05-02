@@ -1,2 +1,2 @@
-main: bookdata.cpp bookdata.h bookinfo.cpp bookinfo.h cashier.cpp cashier.h invmenu.cpp invmenu.h mainmenu.cpp mainmenu.h reports.cpp reports.h
+main: inventorybook.cpp inventorybook.h soldbook.cpp soldbook.h bookdata.cpp bookdata.h bookinfo.cpp bookinfo.h cashier.cpp cashier.h invmenu.cpp invmenu.h mainmenu.cpp mainmenu.h reports.cpp reports.h
 	g++ *.cpp -o main 

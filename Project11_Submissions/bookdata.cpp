@@ -1,10 +1,6 @@
 #include "bookdata.h"
 #include "strupper.h"
 
-BookData::BookData() {
-
-}
-
 // title
 void BookData::setTitle(char* title) {
     strUpper(title);

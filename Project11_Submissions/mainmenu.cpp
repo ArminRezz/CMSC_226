@@ -4,6 +4,7 @@
 //including the other functions
 #include "cashier.h"
 #include "bookdata.h"
+#include "inventorybook.h"
 #include "bookinfo.h"
 #include "reports.h"
 #include "invmenu.h"
