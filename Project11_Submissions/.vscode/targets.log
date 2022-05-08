@@ -6,21 +6,20 @@
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Mon May  2 00:00:22 2022
+
+# Make data base, printed on Sat May  7 21:06:33 2022
 
 # Variables
 
-# environment
-JENV_SHELL = bash
-# automatic
-?F = $(notdir $?)
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
 # environment
 VSCODE_LOG_NATIVE = false
-# environment
-NVM_INC = /Users/arminrezaiyan/.nvm/versions/node/v12.13.1/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -42,15 +41,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-9349a0ae-72b8-4650-bc34-edacc7a96e45.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-220bef48-ce87-4119-9877-c11b0e74aaad.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /Users/arminrezaiyan/.nvm/versions/node/v12.13.1/bin:/Users/arminrezaiyan/.jenv/shims:/Users/arminrezaiyan/.jenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
-# environment
-JENV_FORCEJAVAHOME = true
-# environment
-NVM_BIN = /Users/arminrezaiyan/.nvm/versions/node/v12.13.1/bin
+PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -58,9 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.pVEpcmAzIu/Listeners
-# environment
-JDK_HOME = /Users/arminrezaiyan/.jenv/versions/10.0
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.KLbbaGASFE/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -82,13 +75,9 @@ LOGNAME = arminrezaiyan
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-NVM_CD_FLAGS = 
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# environment
-JENV_FORCEJDKHOME = true
 # environment
 XPC_FLAGS = 0x0
 # default
@@ -96,17 +85,13 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 2
-# environment
-JAVA_HOME = /Users/arminrezaiyan/.jenv/versions/10.0
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = arminrezaiyan
 # makefile
 .DEFAULT_GOAL := main
-# environment
-JENV_LOADED = 1
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -125,8 +110,6 @@ MAKEFLAGS = Rrqp
 MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# environment
-NVM_DIR = /Users/arminrezaiyan/.nvm
 # environment
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.42059255.42059261
 # automatic
@@ -154,9 +137,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9164
+VSCODE_PID = 3819
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=2/96=2%
+# Load=62/1024=6%, Rehash=0, Collisions=1/86=1%
 
 # Pattern-specific Variable Values
 
@@ -278,8 +261,6 @@ Cashier.cpp:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Mon May  2 00:00:22 2022
+# Finished Make data base on Sat May  7 21:06:33 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

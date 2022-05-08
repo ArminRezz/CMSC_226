@@ -1,10 +1,11 @@
 #include "invmenu.h"
 #include "bookdata.h"
+#include "inventorybook.h"
 #include "bookinfo.h"
 #include "strupper.h"
 
 const int SIZE = 20; 
-extern BookData books[20];
+extern InventoryBook books[20];
 char input[51];
 
 void invMenu() {

@@ -8,18 +8,19 @@ using namespace std;
 
 class SoldBook : public InventoryBook 
 {
-private:
-    static double taxRate; 
-    static double total; 
-    int qtySold; 
-    double tax; 
-    double subtotal; 
-public:
-	SoldBook();	// the default constructor	
-    double getTotal() {
-        return total; 
-    }
-
-}
+    private:
+        static double TAX_RATE;
+        int qtySold;
+        double tax, subtotal;
+        static double total;
+    public:
+        SoldBook();
+        void setQtySold(int qtySold);
+        double setTax();
+        double setSubtotal();
+        int getQtySold();
+        double getTax();
+        double getTotal();
+        void addTotal(double total);
 };
 #endif

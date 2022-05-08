@@ -29,10 +29,6 @@ public:
 	char*  getAuthor   ();			 // returns the author of a book
 	void   setPub      (char*);		 // sets the publisher of a book
 	char*  getPub      ();			 // returns the publisher of a book
-	int    isEmpty     (int /*BookData &*/); // returns an integer representing true or false
 
-	// removes a book from inventory and writes the changes made into the inventory file
-    // BookData &, fstream &, int
-	void   removeBook  ();	
 };
 #endif

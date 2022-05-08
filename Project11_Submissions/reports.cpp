@@ -1,11 +1,11 @@
 #include "reports.h"
 #include "invmenu.h"
-#include "bookdata.h"
+#include "inventorybook.h"
 #include "bookinfo.h"
 #include "mainmenu.h"
 
 const int SIZE = 20; 
-extern BookData books[20];
+extern InventoryBook books[20];
 
 void report(){
     
