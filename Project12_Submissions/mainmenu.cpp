@@ -37,9 +37,9 @@ int main(){
     }
     } catch (string e) {
         cout << e << endl;
-        return 0;
+        exit(1);
     }
-    
+
     printMenu();
 }
 
