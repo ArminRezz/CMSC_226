@@ -10,7 +10,7 @@
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Mon May  9 23:24:21 2022
+# Make data base, printed on Sat May  7 21:06:33 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-9c43949b-65f0-400e-9071-d910ce497732.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/vscode-ipc-220bef48-ce87-4119-9877-c11b0e74aaad.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -53,13 +53,13 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.tdsCZ25uhj/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.KLbbaGASFE/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/arminrezaiyan/Desktop/CMSC_226
+PWD = /Users/arminrezaiyan/Desktop/CMSC_226/Project11_Submissions
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -102,7 +102,6 @@ MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 TMPDIR = /var/folders/_x/wk8bpgk12w5698j9cs174bb80000gn/T/
 # automatic
 *F = $(notdir $*)
- 
 # environment
 VSCODE_IPC_HOOK = /Users/arminrezaiyan/Library/Application Support/Code/1.66.2-main.sock
 # makefile
@@ -138,7 +137,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 8348
+VSCODE_PID = 3819
 # variable set hash-table stats:
 # Load=62/1024=6%, Rehash=0, Collisions=1/86=1%
 
@@ -259,10 +258,9 @@ Cashier.cpp:
 
 # # of strings in strcache: 1
 # # of strcache buffers: 1
- 
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4028 / max = 4028 / min = 4028 / avg = 4028
 
-# Finished Make data base on Mon May  9 23:24:21 2022
+# Finished Make data base on Sat May  7 21:06:33 2022
 
  
