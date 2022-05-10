@@ -35,7 +35,7 @@ int main(){
         }
         invFile.close();
     }
-    } catch (string e) {
+    } catch (const char * e) {
         cout << e << endl;
         exit(1);
     }
